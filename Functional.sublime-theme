@@ -3,11 +3,11 @@
 //
 // Colors
 //
-// Dark Foreground - [15, 15, 15]
-// Dark Background - [25, 25, 25]
-// Background Text - [90, 90, 90]
-// Light Foreground - [255, 63, 95]
-// Highlight - [255, 63, 95] (Try to keep the same hue as light fg)
+// [15, 15, 15] // background
+// [25, 25, 25] // foreground
+// [150, 150, 150] // light
+// [225, 225, 225] // highlight
+// [255, 63, 95] // red
 //
 
 //
@@ -18,20 +18,20 @@
     {
         "class": "tabset_control",
         "layer0.texture": "",
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.inner_margin": 0,
         "layer0.opacity": 1,
         "content_margin": 0,
         "tab_overlap": 0,
-        "tab_width": 128,
+        "tab_width": 0,
         "tab_min_width": 48,
-        "tab_height": 28,
+        "tab_height": 30,
         "mouse_wheel_switch": false
     },
     {
         "class": "tabset_control",
         "settings": ["enable_tab_scrolling"],
-        "content_margin": 0
+        "content_margin": 5
     },
     {
         "class": "tabset_control",
@@ -45,7 +45,7 @@
         "max_margin_trim": 0,
         "hit_test_level": 0,
         "layer0.texture": "",
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.inner_margin": [5, 5],
         "layer0.opacity": 1
     },
@@ -65,7 +65,7 @@
         "class": "tab_control",
         "attributes": ["selected"],
         "layer0.texture": "",
-        "layer0.tint": [15, 15, 15], // dark-1
+        "layer0.tint": [25, 25, 25], // foreground
     },
     // Tab dirty state (close button hidden)
     {
@@ -84,7 +84,7 @@
         "class": "tab_close_button",
         "content_margin": [8, 8],
         "layer0.texture": "Theme - Functional/Functional/close.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 0,
         "layer0.inner_margin": 0
     },
@@ -115,7 +115,7 @@
         "class": "tab_close_button",
         "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
         "layer0.texture": "Theme - Functional/Functional/circle.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [255, 63, 95], // red
         "layer0.opacity": 1
     },
     {
@@ -131,7 +131,7 @@
         "class": "tab_close_button",
         "settings": ["highlight_modified_tabs"],
         "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
-        "layer0.tint": [255, 63, 95], // yellow
+        "layer0.tint": [255, 63, 95], // red
         "layer0.opacity": 1
     },
     {
@@ -151,17 +151,17 @@
     {
         "class": "tab_label",
         "fade": true,
-        "fg": [110, 110, 110], // light-2
+        "fg": [150, 150, 150], // light
     },
     {
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["hover"]}],
-        "fg": [200, 200, 200], // light-1
+        "fg": [225, 225, 225], // highlight
     },
     {
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["selected"]}],
-        "fg": [200, 200, 200], // light-0
+        "fg": [225, 225, 225], // highlight
     },
     {
         "class": "tab_label",
@@ -178,42 +178,42 @@
         "class": "show_tabs_dropdown_button",
         "content_margin": [8, 8],
         "layer0.texture": "Theme - Functional/Functional/tab-dropdown.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.inner_margin": 0,
         "layer0.opacity": 1
     },
     {
         "class": "show_tabs_dropdown_button",
         "attributes": ["hover"],
-        "layer0.tint": [200, 200, 200], // light-1
+        "layer0.tint": [225, 225, 225], // highlight
     },
     // Tab scroll left
     {
         "class": "scroll_tabs_left_button",
         "content_margin": [8, 8],
         "layer0.texture": "Theme - Functional/Functional/tab-scroll-left.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.inner_margin": 0,
         "layer0.opacity": 1
     },
     {
         "class": "scroll_tabs_left_button",
         "attributes": ["hover"],
-        "layer0.tint": [200, 200, 200], // light-1
+        "layer0.tint": [225, 225, 225], // highlight
     },
     // Tab scroll right
     {
         "class": "scroll_tabs_right_button",
         "content_margin": [8, 8],
         "layer0.texture": "Theme - Functional/Functional/tab-scroll-right.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.inner_margin": 0,
         "layer0.opacity": 1
     },
     {
         "class": "scroll_tabs_right_button",
         "attributes": ["hover"],
-        "layer0.tint": [200, 200, 200], // light-1
+        "layer0.tint": [225, 225, 225], // highlight
     },
 
 //
@@ -223,7 +223,7 @@
     {
         "class": "fold_button_control",
         "layer0.texture": "Theme - Functional/Functional/folder-closed.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "layer0.inner_margin": 0,
         "content_margin": [8, 8]
@@ -231,7 +231,7 @@
     {
         "class": "fold_button_control",
         "attributes": ["hover"],
-        "layer0.tint": [200, 200, 200], // light-1
+        "layer0.tint": [225, 225, 225], // highlight
     },
     {
         "class": "fold_button_control",
@@ -247,7 +247,7 @@
     {
         "class": "scroll_bar_control",
         "layer0.texture": "",
-        "layer0.tint": [15, 15, 15], // dark-0
+        "layer0.tint": [15, 15, 15], // background
         "layer0.opacity": 1,
         "layer0.inner_margin": [0, 0],
         "blur": true
@@ -257,7 +257,7 @@
         "class": "scroll_bar_control",
         "attributes": ["horizontal"],
         "layer0.texture": "",
-        "layer0.tint": [15, 15, 15], // dark-0
+        "layer0.tint": [15, 15, 15], // background
         "layer0.inner_margin": [0, 0],
         "blur": true
     },
@@ -265,7 +265,7 @@
     {
         "class": "scroll_corner_control",
         "layer0.texture": "",
-        "layer0.tint": [15, 15, 15], // dark-0
+        "layer0.tint": [15, 15, 15], // background
         "layer0.inner_margin": [0, 0],
         "layer0.opacity": 1
     },
@@ -273,7 +273,7 @@
     {
         "class": "puck_control",
         "layer0.texture": "",
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.opacity": 1,
         "layer0.inner_margin": [0, 0],
         "content_margin": [3, 12],
@@ -283,7 +283,7 @@
     {
         "class": "puck_control",
         "attributes": ["horizontal"],
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.inner_margin": [0, 0],
         "content_margin": [12, 3],
         "blur": false
@@ -308,7 +308,7 @@
     {
         "class": "scroll_bar_control",
         "settings": ["overlay_scroll_bars"],
-        "layer0.tint": [15, 15, 15], // dark-1
+        "layer0.tint": [25, 25, 25], // foreground
         "layer0.inner_margin": [0, 5],
         "layer0.opacity": 0,
         "blur": true
@@ -346,7 +346,7 @@
         "class": "puck_control",
         "settings": ["overlay_scroll_bars"],
         "attributes": ["dark"],
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
 
     },
     // Overlay light horizontal puck (for dark content)
@@ -354,7 +354,7 @@
         "class": "puck_control",
         "settings": ["overlay_scroll_bars"],
         "attributes": ["horizontal", "dark"],
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
     },
 
 //
@@ -363,7 +363,7 @@
 
     {
         "class": "sheet_container_control",
-        "layer0.tint": [15, 15, 15], // dark-1
+        "layer0.tint": [25, 25, 25], // foreground
         "layer0.opacity": 1
     },
 
@@ -374,7 +374,7 @@
     {
         "class": "grid_layout_control",
         "border_size": 1,
-        "border_color": [25, 25, 25], // dark-2
+        "border_color": [15, 15, 15], // background
     },
 
 //
@@ -406,7 +406,7 @@
 
     {
         "class": "dialog",
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.opacity": 1
     },
 
@@ -416,12 +416,12 @@
 
     {
         "class": "progress_bar_control",
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.opacity": 1
     },
     {
         "class": "progress_gauge_control",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": [0, 6]
     },
@@ -433,7 +433,7 @@
     // General labels
     {
         "class": "label_control",
-        "color": [110, 110, 110], // light-2
+        "color": [150, 150, 150], // light
     },
     // Text field labels
     {
@@ -445,7 +445,7 @@
         "class": "label_control",
         "parents": [{"class": "button_control"}],
         "font.bold": true,
-        "color": [200, 200, 200], // light-0
+        "color": [225, 225, 225], // highlight
     },
 
 //
@@ -455,7 +455,7 @@
     // Tooltip container
     {
         "class": "tool_tip_control",
-        "layer0.tint": [15, 15, 15], // dark-0
+        "layer0.tint": [15, 15, 15], // background
         "layer0.inner_margin": [1, 1],
         "layer0.opacity": 1,
         "content_margin": [8, 6]
@@ -463,7 +463,7 @@
     // Tooltip content
     {
         "class": "tool_tip_label_control",
-        "color": [200, 200, 200], // light-0
+        "color": [225, 225, 225], // highlight
     },
 
 //
@@ -474,7 +474,7 @@
     {
         "class": "status_bar",
         "layer0.texture": "",
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.opacity": 1,
         "layer0.inner_margin": [2, 2],
         "content_margin": [8, 4]
@@ -488,7 +488,7 @@
     {
         "class": "label_control",
         "parents": [{"class": "status_bar"}],
-        "color": [110, 110, 110], // light-2
+        "color": [150, 150, 150], // light
     },
 
 //
@@ -499,14 +499,14 @@
     {
         "class": "sidebar_container",
         "layer0.opacity": 1,
-        "layer0.tint": [15, 15, 15], // dark-0
-        "layer0.inner_margin": [1, 1, 2, 1],
-        "content_margin": [0, 0, 0, 0]
+        "layer0.tint": [15, 15, 15], // background
+        "layer0.inner_margin": [0, 0, 1, 1],
+        "content_margin": [0, 7, 0, 0]
     },
     // Sidebar tree
     {
         "class": "sidebar_tree",
-        "row_padding": [8, 4],
+        "row_padding": [8, 8],
         "indent": 12,
         "indent_offset": 14,
         "indent_top_level": false,
@@ -515,7 +515,7 @@
     // Sidebar rows
     {
         "class": "tree_row",
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.opacity": 0,
         "layer0.inner_margin": [1, 1]
     },
@@ -528,7 +528,7 @@
     // Sidebar heading
     {
         "class": "sidebar_heading",
-        "color": [200, 200, 200], // light-1
+        "color": [225, 225, 225], // highlight
         "font.bold": true
     },
     // Sidebar heading selected
@@ -539,7 +539,7 @@
     // Sidebar entry
     {
         "class": "sidebar_label",
-        "color": [110, 110, 110], // light-2
+        "color": [150, 150, 150], // light
         "font.bold": false,
         "font.italic": false
     },
@@ -547,12 +547,12 @@
     {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-        "color": [110, 110, 110], // light-2
+        "color": [150, 150, 150], // light
     },
     {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-        "color": [200, 200, 200], // light-1
+        "color": [225, 225, 225], // highlight
     },
     {
         "class": "sidebar_label",
@@ -564,7 +564,7 @@
     {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "color": [200, 200, 200], // light-0
+        "color": [225, 225, 225], // highlight
     },
     // Sidebar entry transient
     {
@@ -581,7 +581,7 @@
     {
         "class": "close_button",
         "layer0.texture": "Theme - Functional/Functional/close.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 0,
         "layer0.inner_margin": 0,
         "content_margin": [8, 8]
@@ -601,7 +601,7 @@
         "class": "close_button",
         "attributes": ["dirty"],
         "layer0.texture": "Theme - Functional/Functional/circle.png",
-        "layer0.tint": [255, 63, 95], // yellow
+        "layer0.tint": [255, 63, 95], // red
         "layer0.opacity": 1
     },
     // Sidebar file close hover
@@ -621,14 +621,14 @@
         "class": "disclosure_button_control",
         "content_margin": [8, 8],
         "layer0.texture": "Theme - Functional/Functional/folder-closed.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "layer0.inner_margin": 0
     },
     {
         "class": "disclosure_button_control",
         "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-        "layer0.tint": [200, 200, 200], // light-1
+        "layer0.tint": [225, 225, 225], // highlight
     },
     {
         "class": "disclosure_button_control",
@@ -661,7 +661,7 @@
     {
         "class": "icon_file_type",
         // layer0.texture is filled in by code with the relevant icon name
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": [8, 8]
     },
@@ -676,7 +676,7 @@
         "content_margin": [4, 8],
         "min_size": [64, 0],
         "layer0.texture": "",
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.opacity": 1,
         "layer0.inner_margin": [8, 8]
     },
@@ -684,13 +684,13 @@
     {
         "class": "button_control",
         "attributes": ["hover"],
-        "layer0.tint": [15, 15, 15], // dark-1
+        "layer0.tint": [25, 25, 25], // foreground
     },
     // Pressed button state
     {
         "class": "button_control",
         "attributes": ["pressed"],
-        "layer0.tint": [15, 15, 15], // dark-0
+        "layer0.tint": [15, 15, 15], // background
     },
 
 //
@@ -701,7 +701,7 @@
     {
         "class": "text_line_control",
         "layer0.texture": "",
-        "layer0.tint": [15, 15, 15], // dark-1
+        "layer0.tint": [25, 25, 25], // foreground
         "layer0.opacity": 1,
         "content_margin": 6
     },
@@ -710,14 +710,14 @@
         "class": "dropdown_button_control",
         "content_margin": [8, 8],
         "layer0.texture": "Theme - Functional/Functional/tab-dropdown.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "layer0.inner_margin": [4, 4]
     },
     {
         "class": "dropdown_button_control",
         "attributes": ["hover"],
-        "layer0.tint": [200, 200, 200], // light-1
+        "layer0.tint": [225, 225, 225], // highlight
     },
 
 //
@@ -728,7 +728,7 @@
     {
         "class": "panel_control",
         "layer0.texture": "",
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [25, 25, 25], // foreground
         "layer0.inner_margin": [0, 0],
         "layer0.opacity": 1,
         "content_margin": 0
@@ -738,7 +738,7 @@
         "class": "overlay_control",
         "layer0.opacity": 1,
         "layer1.texture": "",
-        "layer1.tint": [25, 25, 25], // dark-2
+        "layer1.tint": [15, 15, 15], // background
         "layer1.inner_margin": [0, 0, 0, 0],
         "layer1.opacity": 1,
         "content_margin": 0
@@ -751,14 +751,14 @@
     {
         "class": "quick_panel",
         "row_padding": 8,
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.opacity": 1,
         "dark_content": true
     },
     {
         "class": "quick_panel_row",
         "layer0.texture": "",
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.inner_margin": 8,
         "layer0.opacity": 1
     },
@@ -766,26 +766,26 @@
         "class": "quick_panel_row",
         "attributes": ["selected"],
         "layer0.texture": "",
-        "layer0.tint": [15, 15, 15], // dark-0
+        "layer0.tint": [15, 15, 15], // background
     },
     {
         "class": "quick_panel_label",
-        "fg": [110, 110, 110], // light-2
-        "match_fg": [200, 200, 200], // light-1
-        "selected_fg": [110, 110, 110], // light-2
-        "selected_match_fg": [200, 200, 200], // light-0
+        "fg": [150, 150, 150], // light
+        "match_fg": [225, 225, 225], // highlight
+        "selected_fg": [150, 150, 150], // light
+        "selected_match_fg": [225, 225, 225], // highlight
     },
     {
         "class": "quick_panel_path_label",
-        "fg": [110, 110, 110], // light-2
-        "match_fg": [200, 200, 200], // light-1
-        "selected_fg": [110, 110, 110], // light-2
-        "selected_match_fg": [200, 200, 200], // light-1
+        "fg": [150, 150, 150], // light
+        "match_fg": [225, 225, 225], // highlight
+        "selected_fg": [150, 150, 150], // light
+        "selected_match_fg": [225, 225, 225], // highlight
     },
     {
         "class": "quick_panel_score_label",
-        "fg": [110, 110, 110], // light-2
-        "selected_fg": [110, 110, 110], // light-2
+        "fg": [150, 150, 150], // light
+        "selected_fg": [150, 150, 150], // light
     },
 
 //
@@ -795,14 +795,14 @@
     {
         "class": "mini_quick_panel_row",
         "layer0.texture": "",
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.opacity": 1
     },
     {
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
         "layer0.texture": "",
-        "layer0.tint": [15, 15, 15], // dark-0
+        "layer0.tint": [15, 15, 15], // background
     },
 
 //
@@ -812,7 +812,7 @@
     {
         "class": "popup_control",
         "content_margin": [0, 0],
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.opacity": 1
     },
     {
@@ -821,15 +821,15 @@
     },
     {
         "class": "auto_complete_label",
-        "fg": [110, 110, 110], // light-2
-        "match_fg": [200, 200, 200], // light-1
-        "selected_fg": [110, 110, 110], // light-2
-        "selected_match_fg": [200, 200, 200], // light-1
+        "fg": [150, 150, 150], // light
+        "match_fg": [225, 225, 225], // highlight
+        "selected_fg": [150, 150, 150], // light
+        "selected_match_fg": [225, 225, 225], // highlight
     },
     {
         "class": "table_row",
         "layer0.texture": "",
-        "layer0.tint": [15, 15, 15], // dark-0
+        "layer0.tint": [25, 25, 25], // foreground
         "layer0.opacity": 0,
         "layer0.inner_margin": [3, 1]
     },
@@ -847,14 +847,14 @@
     {
         "class": "icon_button_control",
         "layer1.opacity": 0,
-        "layer0.tint": [25, 25, 25], // dark-2
+        "layer0.tint": [15, 15, 15], // background
         "layer0.opacity": 1,
         "content_margin": 7
     },
     {
         "class": "icon_button_control",
         "attributes": ["selected"],
-        "layer0.tint": [15, 15, 15], // dark-1
+        "layer0.tint": [25, 25, 25], // foreground
     },
     // Button group left
     {
@@ -905,40 +905,40 @@
     {
         "class": "icon_regex",
         "layer0.texture": "Theme - Functional/Functional/regex.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": 8
     },
     {
         "class": "icon_regex",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [200, 200, 200], // light-0
+        "layer0.tint": [225, 225, 225], // highlight
     },
     // Case sensitive search button
     {
         "class": "icon_case",
         "layer0.texture": "Theme - Functional/Functional/casesens.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": 8
     },
     {
         "class": "icon_case",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [200, 200, 200], // light-0
+        "layer0.tint": [225, 225, 225], // highlight
     },
     // Match whole word search button
     {
         "class": "icon_whole_word",
         "layer0.texture": "Theme - Functional/Functional/wholeword.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": 8
     },
     {
         "class": "icon_whole_word",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [200, 200, 200], // light-0
+        "layer0.tint": [225, 225, 225], // highlight
     },
 
 //
@@ -949,27 +949,27 @@
     {
         "class": "icon_context",
         "layer0.texture": "Theme - Functional/Functional/context.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": 8
     },
     {
         "class": "icon_context",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [200, 200, 200], // light-0
+        "layer0.tint": [225, 225, 225], // highlight
     },
     // Use search buffer
     {
         "class": "icon_use_buffer",
         "layer0.texture": "Theme - Functional/Functional/buffer.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": 8
     },
     {
         "class": "icon_use_buffer",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [200, 200, 200], // light-0
+        "layer0.tint": [225, 225, 225], // highlight
     },
 
 //
@@ -980,40 +980,40 @@
     {
         "class": "icon_reverse",
         "layer0.texture": "Theme - Functional/Functional/reverse.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": 8
     },
     {
         "class": "icon_reverse",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [200, 200, 200], // light-0
+        "layer0.tint": [225, 225, 225], // highlight
     },
     // Search wrap button
     {
         "class": "icon_wrap",
         "layer0.texture": "Theme - Functional/Functional/wrap.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": 8
     },
     {
         "class": "icon_wrap",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [200, 200, 200], // light-0
+        "layer0.tint": [225, 225, 225], // highlight
     },
     // Search in selection button
     {
         "class": "icon_in_selection",
         "layer0.texture": "Theme - Functional/Functional/selection.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": 8
     },
     {
         "class": "icon_in_selection",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [200, 200, 200], // light-0
+        "layer0.tint": [225, 225, 225], // highlight
     },
 
 //
@@ -1024,14 +1024,14 @@
     {
         "class": "icon_preserve_case",
         "layer0.texture": "Theme - Functional/Functional/lock.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": 8
     },
     {
         "class": "icon_preserve_case",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [200, 200, 200], // light-0
+        "layer0.tint": [225, 225, 225], // highlight
     },
 
 //
@@ -1042,14 +1042,14 @@
     {
         "class": "icon_highlight",
         "layer0.texture": "Theme - Functional/Functional/highlight.png",
-        "layer0.tint": [110, 110, 110], // light-2
+        "layer0.tint": [150, 150, 150], // light
         "layer0.opacity": 1,
         "content_margin": 8
     },
     {
         "class": "icon_highlight",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [200, 200, 200], // light-0
+        "layer0.tint": [225, 225, 225], // highlight
     }
 
 ]
